@@ -26,8 +26,8 @@ project/
 
 1. Clone this repository:
    ```
-   git clone <repository-url>
-   cd <project-directory>
+   git clone https://github.com/alecKarfonta/fastapi-microservice-skeleton
+   cd fastapi-microservice-skeleton
    ```
 
 2. Build the Docker image:
