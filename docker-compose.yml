@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /home/alec/git/fastapi-microservice-skeleton/model_cache/:/app/model_cache/
+      - /home/alec/git/fastapi-microservice-skeleton/dependencies_cache:/dependencies_cache
+    environment:
+      - ENVIRONMENT=development
+    command: ./scripts/start.sh
