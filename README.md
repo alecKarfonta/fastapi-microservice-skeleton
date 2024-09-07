@@ -50,9 +50,9 @@ project/
    ./scripts/start.sh [optional_log_file_path]
    ```
 
-5. Access the API at `http://localhost:8000`
+5. Access the API at `http://localhost:8400`
 
-6. View the API documentation at `http://localhost:8000/docs`
+6. View the API documentation at `http://localhost:8400/docs`
 
 ## Scripts
 
