@@ -19,10 +19,12 @@ docker run -d \
     --name fastapi-microservice \
     -p 8401:8000 \
     -p 2233:22 \
-    --volume "/home/alec/git/fastapi-microservice-skeleton/model_cache/:/app/model_cache/" \
-    -v "/home/alec/git/fastapi-microservice-skeleton/dependencies_cache:/dependencies_cache" \
     fastapi-microservice
-        
+
+
+# Local volume mounts
+#--volume "/home/alec/git/fastapi-microservice-skeleton/model_cache/:/app/model_cache/" \
+#-v "/home/alec/git/fastapi-microservice-skeleton/dependencies_cache:/dependencies_cache" \
 
 # --name value can be used to pull logs for the container: docker logs fastapi-microservice
 # -p 8400:8000 mounts the host port 8400 to the container port 8000. This is used as the main service port for the FastAPI application.
