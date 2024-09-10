@@ -17,7 +17,7 @@ COPY scripts /app/scripts
 COPY requirements.txt /app/requirements.txt
 
 # Custom pip configuration
-COPY pip.conf /root/.pip/pip.conf
+#COPY pip.conf /root/.pip/pip.conf
 
 
 # Install OpenSSH server
