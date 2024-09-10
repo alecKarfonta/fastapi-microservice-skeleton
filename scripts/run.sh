@@ -17,7 +17,7 @@ fi
 echo "Running the new container..."
 docker run -d \
     --name fastapi-microservice \
-    -p 8401:8000 \
+    -p 8400:8000 \
     -p 2233:22 \
     fastapi-microservice
 
