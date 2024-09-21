@@ -17,8 +17,8 @@ fi
 echo "Running the new container..."
 docker run -d \
     --name fastapi-microservice \
-    -p 8401:8000 \
-    -p 2233:22 \
+    -p 8400:8000 \
+    -p 2222:22 \
     --volume "/home/alec/git/fastapi-microservice-skeleton/model_cache/:/app/model_cache/" \
     -v "/home/alec/git/fastapi-microservice-skeleton/dependencies_cache:/dependencies_cache" \
     fastapi-microservice

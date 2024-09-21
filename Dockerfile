@@ -1,6 +1,10 @@
 # Use an official Python runtime as the base image
 FROM python:3.9-slim
 
+# If you need CUDA support, use this base image instead
+#FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
+
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -29,6 +33,13 @@ RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test
 RUN echo 'test:test' | chpasswd
 
 RUN service ssh start
+
+
+# Set environment variables for CUDA
+#ENV CUDA_HOME=/usr/local/cuda
+#ENV PATH=${CUDA_HOME}/bin:${PATH}
+#ENV LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+
 
 
 # Expose the port that the application will run on
